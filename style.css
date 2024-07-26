@@ -124,7 +124,7 @@ html, body {
 }
 
 .page2 h1{
-    font-size:7vw;
+    font-size:4vw;
     font-weight: 500;
     color: #111;
 
@@ -147,13 +147,13 @@ html, body {
     width: 24%;
 }
 .page2-left h2{
-    font-size: 4vw;
+    font-size: 3vw;
     font-weight: 300;
     color: #111;
     line-height: 4vw;
 }
 .page2-right p{
-    font-size: 28px;
+    font-size: 20px;
     color: #111;
 }
 .page2-right button{
