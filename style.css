@@ -143,6 +143,7 @@ html, body {
     width: 40%;
 }
 .page2-right{
+    margin-top: -5vh;
     /* background-color: blue; */
     width: 24%;
 }
@@ -154,6 +155,7 @@ html, body {
 }
 .page2-right p{
     font-size: 20px;
+    line-height: 4vh;
     color: #111;
 }
 .page2-right button{
@@ -216,11 +218,17 @@ html, body {
     transform: translateY(10%) rotate(2deg);
 }
 .elem img:nth-child(1){
-    left: 2%;
+    left: -2%;
+    height: 60vh;
 }
 .elem img:nth-child(3){
-    right: 5%;
+    height: 60vh;
+    width: 35vw;
+    right: -2vw;
+    object-fit: cover;
+    object-position: center;
 }
+
 .text-div{
     height: 16vh;
     position: relative;
@@ -242,39 +250,191 @@ html, body {
     transform: translateY(0%) rotate(0deg);
 
 }
+#page5{
+    margin-bottom: 10vh;
+}
 
-
-.page5{
-    min-height: 100vh;
+.containers {
     width: 100%;
+    padding: 0 8%;
+  }
+  
+  .containers h1 {
+    text-align: center;
+    margin: 60px 0;
+    font-weight: 600;
     position: relative;
-    z-index: 9;
-    padding: 140px 100px;
-}
-.page5 h2{
-    font-size: 4vw;
-    text-transform: uppercase;
-    font-weight: 400;
-    margin-bottom: 50px;
-}
-.box{
-    /* background-color: red; */
+  }
+  
+  .containers h1::after {
+    content: '';
+    background: #EDBFFF;
+    width: 100px;
+    height: 5px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .row {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
-    height: 100px;
-    padding: 0 20px;
-    border-top: 2px solid #dadada;
+    gap: 20px;
+  }
+  
+  .service {
+    flex: 1 1 calc(33.333% - 40px);
+    max-width: calc(33.333% - 40px);
+    text-align: center;
+    padding: 25px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background: transparent;
+    transition: transform 0.5s, background 0.5s;
+  }
+  
+  .service i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .service h2 {
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .service h2:hover {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #7776B3;
+  }
+  
+  .service p {
+    margin: 0;
+  }
+  .service p:hover {
+    margin: 0;
+    color: #7776B3;
+  }
+ 
+  
+  .service:hover {
+    background: #EDBFFF;
+    color: #fff;
+    transform: scale(1.05);
+  }
+  
+  .service:hover i {
+    color: #7776B3;
+  }
+  
+  @media (max-width: 768px) {
+    .service {
+      flex: 1 1 calc(50% - 20px);
+      max-width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .service {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+    
+
+.footer {
+	background-color: #0F0D0D;
+	padding: 80px 0;
 }
 
-.box:nth-last-child(1){
-    border-bottom: 2px solid #dadada;
-
+.container {
+	max-width: 1170px;
+	margin: auto;
 }
 
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
 
-footer{
-    height: 90vh;
-    width: 100%;
-    background-color: #EDBFFF;
+ul {
+	list-style: none;
+}
+
+.footer-col {
+	width: 25%;
+	padding: 0 15px;
+}
+
+.footer-col h4 {
+	font-size: 18px;
+	color: #FFF;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+
+.footer-col h4::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	background-color: #7776B3;
+	width: 50px;
+	height: 2px;
+}
+
+.footer-col ul li:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+	color: #DDD;
+	display: block;
+	font-size: 1rem;
+	font-weight: 300;
+	text-transform: capitalize;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+	color: #FFF;
+	padding-left: 7px;
+}
+
+.footer-col .social-links a {
+	color: #FFF;
+	background-color: rgba(255, 255, 255, 0.2);
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	text-align: center;
+	margin: 0 10px 10px 0;
+	line-height: 40px;
+	transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+	color: #151515;
+	background-color: #FFF;
+}
+
+@media(max-width: 767px) {
+	.footer-col {
+		width: 50%;
+		margin-bottom: 30px;
+	}
+}
+
+@media(max-width: 574px) {
+	.footer-col {
+		width: 100%;
+	}
 }
